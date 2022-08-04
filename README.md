@@ -9,7 +9,8 @@ bin/console app:es-fill -a 10000
 Then search by text.
 
 ```
-bin/console app:es-query Alice  
+bin/console app:es-query Alice
+
 {"query":{"bool":{"should":[{"match_phrase":{"message":"Alice"}},{"term":{"user":"Alice"}}],"minimum_should_match":1}},"sort":{"timestamp":"desc"}}
 Took:7ms
 Hits:5286
